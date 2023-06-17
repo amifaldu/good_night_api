@@ -31,3 +31,18 @@
 
 en:
   hello: "Hello world"
+  api:
+    users:
+      create:
+        success: "User registered successfully"
+        data_missing: "Please insert the user data"
+      follow_users:
+        success: "User followed successfully"
+        already_following: "User is already being followed"
+        user_not_found: "Following user not found"
+        required_user: "User and following user must be present"
+        already_register: "User is already following the specified user"
+      unfollow_user:
+        success: "User unfollowed successfully"
+        not_following: "User is already being followed"
+        user_not_found: "Following user not found"
