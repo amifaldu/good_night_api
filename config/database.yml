@@ -1,16 +1,23 @@
-    #gem pg
+#gem pg
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  
+development:
+  <<: *default
+  database: good_night_api_development
+  host: localhost
+  port: 5432
+  username: ENV['db_user_name']
+  password: ENV['db_password']
 
-    default: &default
-      adapter: postgresql
-      encoding: unicode
-      # For details on connection pooling, see Rails configuration guide
-      # http://guides.rubyonrails.org/configuring.html#database-pooling
-      pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-      
-    development:
-      <<: *default
-      database: good_night_api_development
-      host: localhost
-      port: 5432
-      username: ENV['db_user_name']
-      password: ENV['db_password']
+test:
+  <<: *default
+  database: good_night_api_test
+  host: localhost
+  port: 5432
+  username: ENV['db_user_name']
+  password: ENV['db_password']
