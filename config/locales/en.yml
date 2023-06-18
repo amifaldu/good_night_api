@@ -44,5 +44,12 @@ en:
         already_register: "User is already following the specified user"
       unfollow_user:
         success: "User unfollowed successfully"
-        not_following: "User is already being followed"
+        not_following: "User is not following the specified user"
         user_not_found: "Following user not found"
+      clock_in:
+        success: "Clock-in successfully"
+        error: "Something went wrong while inserting clock in. Please try again."
+        clock_out_remaining: "Clock-out entry is pending. Please clock out before clocking in again."
+      clock_out:
+        success: "Clock-out successfully"
+        error: "You have already clocked-out"
