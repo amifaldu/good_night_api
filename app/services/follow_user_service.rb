@@ -46,7 +46,7 @@ class FollowUserService
       set_success(I18n.t('api.users.unfollow_user.success'), delete_user)
       return response
     else
-      add_error([I18n.t('api.users.unfollow_user.not_following')])
+      add_error(I18n.t('api.users.unfollow_user.not_following'))
       return response
     end
   end
