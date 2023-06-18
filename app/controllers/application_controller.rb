@@ -3,6 +3,6 @@ class ApplicationController < ActionController::API
 
   # Returns the currently authenticated user
   def current_user
-    @current_user ||= Users.find_by(id: (params[:user_id] || params[:id]))
+    @current_user ||= User.find_by(id: (params[:user_id] || params[:id]))
   end
 end

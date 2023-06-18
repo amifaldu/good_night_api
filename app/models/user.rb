@@ -1,4 +1,4 @@
-class Users < ApplicationRecord
+class User < ApplicationRecord
   # Associations
   has_many :sleep_records, dependent: :destroy
   has_many :follower_users, foreign_key: :follower_user_id, class_name: 'UserFollowing'
