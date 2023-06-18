@@ -8,7 +8,7 @@ RSpec.describe FollowUserService do
     context 'with valid parameters' do
       it 'returns a success response' do
         expect(service.call[:success]).to be true
-        expect(service.call[:message]).to eq('User followed successfully')
+        expect(service.call[:message]).to eq(I18n.t('api.users.follow_users.success'))
         expect(service.call[:data]).to include(following_user)
       end
 
@@ -38,7 +38,7 @@ RSpec.describe FollowUserService do
       end
       it 'destroys the follower_user association and returns a success response' do
         expect(service.unfollow[:success]).to be true
-        expect(service.unfollow[:message]).to eq('User unfollowed successfully')
+        expect(service.unfollow[:message]).to eq(I18n.t('api.users.unfollow_user.success'))
       end
     end
 
@@ -46,7 +46,7 @@ RSpec.describe FollowUserService do
       it 'returns an error response' do
         expect(service.unfollow).to eq({
           success: false,
-          errors: ["User is not following the specified user"],
+          errors: [I18n.t('api.users.unfollow_user.user_not_found')],
           message: '',
           data: nil
         })
@@ -57,7 +57,7 @@ RSpec.describe FollowUserService do
       it 'returns an error response' do
         expect(service.unfollow).to eq({
           success: false,
-          errors: ["User is not following the specified user"],
+          errors: [I18n.t('api.unfollow_user.not_following')],
           message: '',
           data: nil
         })
