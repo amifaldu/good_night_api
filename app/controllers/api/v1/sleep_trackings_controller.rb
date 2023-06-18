@@ -1,6 +1,6 @@
   class Api::V1::SleepTrackingsController < ApplicationController
     def index
-      user = Users.find_by(id: params[:user_id])
+      user = User.find_by(id: params[:user_id])
       sleep_trackings = user.following_users.last_week_sleep_trackings.as_json
       render json: sleep_trackings
     end
