@@ -32,11 +32,11 @@ $ bundle install
 
 - Database creation
 ```
-$ rails db: create
+$ rails db:create
 ```
 - Tables migration
 ```
-$ rails db: migrate
+$ rails db:migrate
 ```
 
 #### Running Tests
