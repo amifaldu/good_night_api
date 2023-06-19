@@ -16,9 +16,6 @@ gem "puma", "~> 5.0"
 # gem "kredis"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
-# used swagger for api document
-gem 'rswag-api'
-gem 'rswag-ui'
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 4.4.1'
