@@ -37,7 +37,7 @@ class SleepTrackingService
       update_record = last_sleep_record.update!(sleep_end: current_time, sleep_duration: (current_time - last_sleep_record.sleep_start))
       set_success(I18n.t('api.users.clock_out.success'), update_record)
     else
-      add_error(I18n.t('api.clock_out.error'))
+      add_error(I18n.t('api.users.clock_out.error'))
     end
     return @response
   end
